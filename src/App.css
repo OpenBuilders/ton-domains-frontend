@@ -1,0 +1,79 @@
+body {
+  overflow: auto;
+  background-color: #f2f1f6 !important;
+}
+
+.layout-container {
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.input-info {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8e8e93;
+}
+
+.info-container {
+  display: flex;
+}
+
+.info-container--inline {
+  display: inline-flex;
+}
+
+.info-container .info-icon {
+  display: block;
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-size: contain;
+  background-position: center;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAD7ElEQVRoge3ay29XRRQH8E/1Z/sjoNCWAkuJT9RU9gQfGy3BBZpoouIOgxseQbfq0ro1aeI/YogYRRCNVUTdWAvoRmuiCTa+KgTNdTFzM7e1r9+98/sVEr7JzUlm5p7HnTlnzpy53MC1hb6MvIbwEHbhPtyBLVgf+//Cz/ge3+AMTmM2ow610cYLOIF/UXT4/IN3sR8DPdYdrMPL+Kmi1GV8gFexDzswiFviMxjb9uE1nIzvlO/P4JjwcXqCvfiuosDnOICNNXhtwos4W+F3EXuyaLoE2ni7IvALPJaR/xi+rPCf0IXZ2SYoXghOewg35xYSeR7BnDTbW3Mx3y5Md4EpPJCL8TIYxXSUeSHq0AgjFYafYXNThh1gUAjRheCT2+oyakvL6RNpP+gl1uNTaZnV8pnSsaeEza5T9ONNIUTPYDy2dYphaVVMdPryXsmx6/rEuP9vgOM1eY1KAWBstS+tk/aJQzUFE2ZhoSEzDfgdlZx/VUvsFWmfaBJicxvSwleRz9GVBreltKPpZrfY0nqjIc89kc+PVsjN9ksRoin6BWNmNHP2KvqkSPrccgPfi4MONBTYTRwUdDy+1IAhIa2+rF4C2CsM4gququh5U2XAw4Jzf4zfeqpaZ5gVNsmWcJDDfEN2RfphD5Wqi5OR7i4bWpXOHZF+nUFQsUR7rqN1qeO9ZUN1Ru6K9EImYd3E+UjvXqzzkvAl6+RVS2HhPpILmyO/XxbrvBI7m8b6KrplyIBUJ8D8pXVdo2rIn5FuWAtFOsRtkf5eNlQNuRRptjNyF7El0l/LhqohZbRaNBJcY7gn0jJ6zTNkKtIHe6ZOfYxG+m3ZUDXkTKSP9Eyd+ng00tOLdQ5KSeOmTAK7EX6HpKSxdPp5MzKL94UY/XQmod3AM8Jed0Ilai3E88KXO5tJaO4Z6cO5yOvZ5QYOCMfIAo9nEJzbkCcinx+s4hriWBx8TvP6bk5DWkLWW+Dwal5oS7XeIzWFrnTBUwflB57WwaVQWa2Yk2J2J8htyE78rWZ1Z0L6AsM1hOfCiJB1FHirDoO2UBYqhDPyWhSxN2Ay6jCpwT3jiJAGlNcKIzm0WyWGhEJIeR3XOJndLk3ttN7kYjsrMs/j9lyMt0rLbE6ovbaWfaMeWkJ0Kh17UkrZs6EtBYBCKCjnun3tE64yyn2idOyu3r2PSdNeVu0PCklnpxjCS1LaUS6lnLfFy6ItLK8ynSmEjPQUXseTuF8I2/3xGRYujZ6KY05JBY8y7Thsjf6AGBCq4seFI8BKG+HC5yreERLARgbk/Klmo1CL3S1ULe8UwvWtsf8PoQ51UQjpHwmzsmQqfgPXM/4DBaQ+gM0EhfQAAAAASUVORK5CYII=);
+}
+
+.info-container .info-text {
+  font-size: 15px;
+  line-height: 20px;
+  color: #8e8e93;
+}
+
+.info-tip {
+  padding: 16px;
+  min-width: 180px;
+}
+
+.input {
+  border: none !important;
+  background-color: #fff !important;
+  transition: background 0.2s ease, border 0.2s ease !important;
+  box-shadow: 0 0 2px rgb(231, 231, 231);
+}
+
+.input:focus {
+  /* background-color: #fff !important; */
+  /* border: 1px solid rgb(157, 157, 157) !important; */
+}
+
+.input-label {
+  font-size: 17px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.input-label .info-container {
+  margin-left: 5px;
+}
+
+.info-helper {
+  font-size: 13px;
+  line-height: 20px;
+  color: #8e8e93;
+}
+
+.info-helper--mtop {
+  margin-top: 5px;
+}

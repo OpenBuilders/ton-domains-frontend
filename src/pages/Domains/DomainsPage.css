@@ -1,0 +1,17 @@
+.page-domains .domains-container {
+  margin: 20px 0;
+}
+
+.action-sheet,
+.action-sheet-mask {
+  position: fixed;
+}
+
+.hide-this-sheet {
+  display: none;
+}
+
+.domain-action-link {
+  color: #0076ff;
+  text-decoration: none;
+}

@@ -1,0 +1,105 @@
+.page-add {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-add .card {
+  background: none !important;
+  box-shadow: none;
+}
+
+.page-add .page-inner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.2s ease;
+}
+
+.input-row:first-child {
+  opacity: 1;
+}
+
+.min-bid-row {
+  font-size: 18px;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.2s ease;
+}
+
+.input-label--stretch {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-helper {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #8e8e93;
+}
+
+.input-helper-domain {
+  margin-top: 6px;
+}
+
+.input {
+  flex-grow: 1;
+  background-color: rgba(118, 118, 128, 0.12);
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  line-height: 38px;
+  padding: 0 10px;
+  font-size: 16px;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  position: relative;
+}
+
+.input[disabled] {
+  opacity: 0.5;
+}
+
+.page-add .button-container {
+  margin-top: auto;
+}
+
+.domain-status {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.input-validation {
+  font-size: 12px;
+  color: tomato;
+  margin-top: 5px;
+}
+
+.validation-rules-link {
+  color: rgb(2, 100, 153);
+}
+
+.input-row:last-child {
+  margin-bottom: 0;
+}
+
+.fadedOut {
+  opacity: 0;
+}
+
+.fadedIn {
+  opacity: 1;
+}
+
+.minBid-value {
+  font-size: 16px;
+  color: #8e8e93;
+}

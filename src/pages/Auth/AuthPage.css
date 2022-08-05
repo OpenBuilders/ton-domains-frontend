@@ -1,0 +1,37 @@
+.page-auth {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-auth .button-container {
+  margin-top: auto;
+  /* margin-bottom: 14px; */
+}
+
+.page-auth .title {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.page-auth .subtitle {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 26px;
+  line-height: 22px;
+  color: #818c99;
+}
+
+.page-auth .name {
+  width: 120px;
+  height: 120px;
+  background: #ededed;
+  background-size: 62px;
+  background-position: 33px center;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  margin: 20px auto 35px;
+  background-image: url(https://testnet.tonstarter.com/e6c9868c9660a302512f.png);
+}

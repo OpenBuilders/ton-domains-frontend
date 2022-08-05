@@ -1,0 +1,34 @@
+.page-topup .card {
+  background: none !important;
+  box-shadow: none;
+}
+
+.page-topup .input-row {
+  width: auto;
+}
+
+.page-topup .wallet-address {
+  /* font-weight: 500; */
+  margin-top: 8px;
+}
+
+/* .page-topup .action-container {
+  border-top: 1px solid rgb(0 0 0 / 8%);
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: -16px;
+  margin-top: 16px;
+  text-align: center;
+} */
+
+.page-topup .wallet-address span {
+  display: block;
+}
+
+/* .page-topup .info-container {
+  margin-top: 16px;
+}
+
+.info-container--fee {
+  margin-top: 8px !important;
+} */

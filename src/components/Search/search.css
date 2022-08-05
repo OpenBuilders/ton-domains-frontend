@@ -1,0 +1,8 @@
+.search-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+.search-bar, .search-bar input {
+    width: 100%;
+}
