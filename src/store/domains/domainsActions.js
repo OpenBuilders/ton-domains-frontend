@@ -85,8 +85,6 @@ export const fetchOneDomain = createAsyncThunk(
 export const deleteDomain = createAsyncThunk(
   'domains/deleteDomain',
   async ({ domainName }, { rejectWithValue }) => {
-    console.log(domainName)
-
     const { ok, data, error } = await ApiService.delete({
       endpoint: `/domains/follow/${domainName}`,
     })

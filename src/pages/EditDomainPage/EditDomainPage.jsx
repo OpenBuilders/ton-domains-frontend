@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 
 import {
-  domainsSelector,
   fetchOneDomain,
   updateDomain,
 } from '../../store/domains'
@@ -26,6 +25,7 @@ export const EditDomainPage = () => {
   const [domain, setDomain] = useState(domainName)
   const [currentBid, setCurrentBid] = useState('')
   const [maxBid, setMaxBid] = useState('')
+  const [domainContext, setDomainContext] = useState('')
   const [maxBidValidationMsg, setMaxBidValidationMsg] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const user = useSelector(currentUserSelector)
@@ -48,12 +48,13 @@ export const EditDomainPage = () => {
 
       setMaxBid(nanoToDisplay(domainContext.maxBid))
       setCurrentBid(nanoToNumber(domainContext.maxBid))
+      setDomainContext(domainContext)
       window.state.maxBid = nanoToDisplay(domainContext.maxBid)
+      window.state.isPin = domainContext.isPin
     }
 
     fetchDomainContext()
 
-    //TODO: would be nice to not show this page for those who don't own this domain
     //TODO: cover catch
   }, [])
 
@@ -75,6 +76,7 @@ export const EditDomainPage = () => {
     window.state = {
       domain: domain,
       maxBid: 0,
+      isPin: domainContext.isPin,
       validation: {
         domain: true,
         maxBid: true,
@@ -95,21 +97,15 @@ export const EditDomainPage = () => {
     if (!currentBidIsOk || !balanceIsOk) {
       window.state.validation.maxBid = false
       setMaxBidValidationMsg('Not sufficient funds, top up your account')
-    } else if (Number(bid) < Number(maxBid)) {
+    } else if (domainContext.isOwner && Number(bid) < Number(currentBid)) {
       window.state.validation.maxBid = false
-      setMaxBidValidationMsg('Must be higher then previous max bid')
+      setMaxBidValidationMsg(`Must be greater than current bid ${Number(currentBid)} TON`)
     } else if (Number(bid) <= 0) {
       window.state.validation.maxBid = false
       setMaxBidValidationMsg('Must be greater than zero')
     } else {
       window.state.validation.maxBid = true
       setMaxBidValidationMsg('')
-    }
-
-    if (currentBid && Number(bid) < Number(currentBid)) {
-      setMaxBidValidationMsg(
-        `Must be greater than current bid ${Number(currentBid)} TON`
-      )
     }
 
     setMaxBid(bid)
@@ -146,6 +142,7 @@ export const EditDomainPage = () => {
         userId: user.id,
         domainName: window.state.domain,
         maxBid: tonNumberToNano(window.state.maxBid),
+        isPin: window.state.isPin
       }
 
       await dispatch(updateDomain({ domainData: domainData }))
@@ -171,20 +168,6 @@ export const EditDomainPage = () => {
               required
             />
           </div>
-          {/* <div className="input-row">
-          <div className="input-label">
-            <label htmlFor="minBid">First bid</label>
-          </div>
-          <input
-            name="minBid"
-            type="number"
-            min={minBidValue()}
-            className="input"
-            placeholder="Where you want to start"
-            disabled={isLoading}
-            required
-          />
-        </div> */}
           <div className="input-row">
             <div className="input-label">
               <label htmlFor="maxBid">Max bid</label>

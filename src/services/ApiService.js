@@ -59,6 +59,7 @@ axios.interceptors.response.use(
 
 export const ApiService = {
   get: ({ endpoint, params }) => {
+    // use this to avoid backend
     // if (endpoint === '/domains') {
     //   return new Promise((resolve) => {
     //     resolve({ data: domainsMock, ok: true, error: false })
