@@ -149,10 +149,9 @@ export const AddDomainPage = () => {
 
   const isMaxBidValid = () => {
     const userBalanceNumber = Number(nanoToNumber(userBalance.result))
-    const currentBidIsOk = userBalanceNumber >= Number(maxBid)
     const balanceIsOk = userBalanceNumber > 0
-    const minBidIsOk = userBalanceNumber > Number(minBid)
-    const maxBidIsOk = userBalanceNumber > Number(maxBid)
+    const minBidIsOk = userBalanceNumber >= Number(minBid)
+    const maxBidIsOk = userBalanceNumber >= Number(maxBid)
 
     if (maxBid === undefined) {
       setMaxBidValidationMsg('')
@@ -160,7 +159,7 @@ export const AddDomainPage = () => {
     } else if (Number(minBid) > Number(maxBid)) {
       setMaxBidValidationMsg('Max bid must be higher than min bid')
       return false
-    } else if (!currentBidIsOk || !balanceIsOk || !minBidIsOk || !maxBidIsOk) {
+    } else if (!balanceIsOk || !minBidIsOk || !maxBidIsOk) {
       setMaxBidValidationMsg('Insufficient balance')
       return false
     } else if (Number(maxBid) <= 0) {
