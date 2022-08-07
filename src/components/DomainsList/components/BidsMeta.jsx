@@ -25,7 +25,7 @@ export const BidsMeta = ({ domain }) => {
       )}
 
       {domain.maxBid &&
-        (domain.status === 'auction' || domain.status === 'free') && (
+        (domain.status === 'auction' || domain.status === 'free' || domain.status === 'sync') && (
           <span
             className={['item-price', attention && 'item-attention'].join(' ')}
           >

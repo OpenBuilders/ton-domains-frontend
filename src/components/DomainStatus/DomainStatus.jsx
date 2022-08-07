@@ -76,22 +76,15 @@ export const DomainStatus = (props) => {
           icon: greenCircle,
           status: 'Available',
         }
-      case 'booked':
-        return {
-          icon: blueCircle,
-          status: 'Auction',
-        }
       case 'new':
         return {
           icon: greenCircle,
           status: 'Free',
         }
+      case 'booked':
       case 'processing':
-        return {
-          icon: blueCircle,
-          status: 'Auction',
-        }
       case 'auction':
+      case 'sync':
         return {
           icon: blueCircle,
           status: 'Auction in process',
