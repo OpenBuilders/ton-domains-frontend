@@ -19,7 +19,7 @@ As it is Telegram Web App, for the full experience you might need to place this 
 
 ## Additional setup
 
-We have no mocks, so the only way to launch the app for now is to also start [backend part](https://github.com/Tonstarter). 
+We have no mocks, so the only way to launch the app for now is to also start [backend part](https://github.com/Tonstarter/ton-domains-backend). 
 
 💡 You are welcome to make a PR, adding mocks or even make nobackendblockhainonly app version.
 
