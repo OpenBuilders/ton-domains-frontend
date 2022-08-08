@@ -94,6 +94,14 @@ export const DomainsPage = () => {
         domainItemClick={domainItemClick}
         domainListLoaded={domainListLoaded}
       />
+      <div className="footer">
+        <div>
+          <code>v0.0.5</code>
+          <br />
+          <a href="https://t.me/ton_starter_support_bot">Help</a>
+        </div>
+        <div>Made with 💙<br/>by <a href="https://tonstarter.com/">Tonstarter</a></div>
+      </div>
       {domainContext.domainName && (
         <DomainActions
           isOpen={actionVisible}
