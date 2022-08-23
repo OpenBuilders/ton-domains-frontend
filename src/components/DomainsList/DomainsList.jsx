@@ -38,7 +38,7 @@ export const DomainsList = (props) => {
   const { domainListLoaded } = props
 
   const domainsInfo = [...props.domainsData].sort((el1, el2) => {
-    return el2.isPin - el1.isPin
+    return el2.isPin - el1.isPin || new Date(el2.finishAt) < new Date(el1.finishAt);
   })
 
   if (!domainListLoaded) {
