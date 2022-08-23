@@ -78,7 +78,7 @@ export const AddDomainPage = () => {
       return
     }
 
-    if (!isMaxBidValid() || !domain || domainAdded) {
+    if (!isMaxBidValid() || !domain || domainAdded || domainValidationMsg) {
       setTelegramButtonInvalidState()
     } else {
       setTelegramButtonValidState()
@@ -132,9 +132,7 @@ export const AddDomainPage = () => {
       setDomainValidationMsg('Must be between 4 and 126 characters\n')
     } else if (!event.target.value.match(/^[a-z0-9-]+$/g)) {
       setDomainContext('')
-      setDomainValidationMsg(
-        'Lowercase eng letters, digits, and hyphens only\n'
-      )
+      setDomainValidationMsg('Lowercase eng letters, digits, and hyphens only\n')
     } else {
       setDomainValidationMsg('')
     }
@@ -209,7 +207,7 @@ export const AddDomainPage = () => {
 
     const domainData = {
       userId: user.id,
-      domainName: window.state.domain,
+      domainName: String(window.state.domain).toLowerCase(),
       maxBid: tonNumberToNano(window.state.maxBid),
     }
 
