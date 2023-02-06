@@ -23,6 +23,9 @@ We have no mocks, so the only way to launch the app for now is to also start [ba
 
 💡 You are welcome to make a PR, adding mocks or even make nobackendblockhainonly app version.
 
+## Statistics on 6 FEB 2023
+![image](https://user-images.githubusercontent.com/10567518/217045635-b9889099-c43d-4efa-b5af-42f0459e7f34.png)
+
 ## Contribute
 
 Later on we gonna add dedicated Contribute.md, for now it's enough to stick to these rules:
