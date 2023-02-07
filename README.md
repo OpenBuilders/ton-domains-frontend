@@ -35,3 +35,9 @@ Later on we gonna add dedicated Contribute.md, for now it's enough to stick to t
 3. Please make it clean, imagine your grandchildren gonna see that code
 
 Stay safe. Let the Lizzard be with you 🦎
+
+## Donate
+
+Just in case, here is our TON wallet: `EQCpYlastF0WWcl-H9DklvLywkZYIgRF6HaPrnh5yp_-7R2U`
+
+All donations will be used, to buy some lush Pu'er tea to boost our productivity 🍵
