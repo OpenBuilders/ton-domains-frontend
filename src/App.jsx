@@ -56,6 +56,13 @@ function App() {
     }
   }, [isAuth])
 
+
+  return (
+    <div className="layout-maintenance">
+      <h1>🚧 👷‍♂️ 🚧</h1>
+      <code>app is under maintenance</code>
+    </div>
+  )
   return (
     <div className="layout-container">
       <ToastProvider>

@@ -2,7 +2,16 @@ body {
   overflow: auto;
   background-color: #f2f1f6 !important;
 }
-
+#root {
+  height: 100%;
+}
+.layout-maintenance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
 .layout-container {
   margin: 0 auto;
   min-height: 100vh;
